@@ -59,4 +59,7 @@ A comprehensive mini ERP (Enterprise Resource Planning) system featuring invento
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### Permission
+This software is provided "as is" with no warranties. You are free to use, modify, distribute, and sublicense this software for any purpose, commercial or personal.
