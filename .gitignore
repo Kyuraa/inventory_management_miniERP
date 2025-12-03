@@ -3261,3 +3261,57 @@ start-backend.cmd
 start-frontend.cmd
 start-system.bat
 demo_guide.md
+
+# Compose profiles
+compose.yaml
+compose.yml
+
+# Static files
+staticfiles/
+frontend/build/
+frontend/public/static/
+*.static
+
+# Media files
+media/
+*.media
+
+# Static files
+staticfiles/
+frontend/build/
+frontend/public/static/
+*.static
+
+# Media files
+media/
+*.media
+
+# Static files
+staticfiles/
+frontend/build/
+frontend/public/static/
+*.static
+
+# Media files
+media/
+*.media
+
+"# Static files
+"staticfiles/
+"frontend/build/
+"frontend/public/static/
+"*.static
+"
+"# Media files
+"media/
+"*.media
+# Static files
+staticfiles/
+frontend/build/
+frontend/public/static/
+*.static
+
+# Media files
+media/
+*.media
+docker-compose.prod.yml

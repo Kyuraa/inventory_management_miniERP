@@ -13,6 +13,7 @@ A comprehensive mini ERP (Enterprise Resource Planning) system featuring invento
 - Python 3.8+
 - Node.js 16+
 - pip and npm
+- Docker and Docker Compose (optional, for containerized deployment)
 
 ## How to Run
 
@@ -52,10 +53,50 @@ A comprehensive mini ERP (Enterprise Resource Planning) system featuring invento
    - **Admin Panel**: http://localhost:8000/admin
    - **API**: http://localhost:8000/api
 
+### Docker Setup (Recommended for consistent environments)
+1. **Build and run with Docker Compose**
+   ```bash
+   docker-compose up --build
+   ```
+
+2. **Access the application**
+   - **Main App**: http://localhost:3000
+   - **Admin Panel**: http://localhost:8000/admin
+   - **API**: http://localhost:8000/api
+
+3. **Run commands in containers (if needed)**
+   ```bash
+   # Run migrations
+   docker-compose exec backend python manage.py migrate
+   
+   # Create superuser
+   docker-compose exec backend python manage.py createsuperuser
+   
+   # Collect static files
+   docker-compose exec backend python manage.py collectstatic --noinput
+   ```
+
+4. **Adding Static Files**
+   Static files can be added to the `frontend/public/static` directory. These files will be automatically served by the nginx server at the `/static/` endpoint. For example:
+   - Add CSS files to `frontend/public/static/`
+   - Add JavaScript files to `frontend/public/static/`
+   - Add images to `frontend/public/static/images/`
+   
+   After adding files, rebuild the Docker containers:
+   ```bash
+   docker-compose down
+   docker-compose up --build
+   ```
+
+5. **Stop the application**
+   ```bash
+   docker-compose down
+   ```
+
 ## Tech Stack
 - **Backend**: Django + Django REST Framework
 - **Frontend**: React + Bootstrap
-- **Database**: SQLite (development)
+- **Database**: SQLite (development) / PostgreSQL (Docker)
 
 ## License
 
